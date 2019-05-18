@@ -1,0 +1,12 @@
+[package]
+name = "rust_window"
+version = "0.1.0"
+authors = ["Andrew Serrano <aserrano@miva.com>"]
+edition = "2018"
+
+[dependencies]
+user32-sys = "0.2.0"
+winapi = "0.3.7"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3.7", features = ["windef","winuser","highlevelmonitorconfigurationapi"] }
